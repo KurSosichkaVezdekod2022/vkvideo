@@ -16,11 +16,12 @@ while True:
     resp = vk.method('video.get', {'access_token': mytoken, 'owner_id': -214437613})
     #print(resp)
     if resp['items'] != []:
-        id = resp['items'][0]['id']
-        if id not in mas:
-            mas.append(id)
-            print('Новый стрим! Название:' + resp['items'][0]['title'] + '. Ссылка: ' + resp['items'][0]['player'])
-    sleep(60)
+        if id = resp['items'][0]['type'] == 'live':
+            id = resp['items'][0]['id']
+            if id not in mas:
+                mas.append(id)
+                print('Новый стрим! Название:' + resp['items'][0]['title'] + '. Ссылка: ' + resp['items'][0]['player'])
+        sleep(60)
 
 
 
